@@ -1,4 +1,5 @@
 import "./App.css";
+import { TypeAnimation } from "react-type-animation";
 
 function App() {
   const projects = [
@@ -50,7 +51,22 @@ function App() {
           <h1>
             Hi, I’m <span>Teboho</span>
             <br />
-            Full-Stack Developer
+
+            <TypeAnimation
+              sequence={[
+                "Full-Stack Developer",
+                2000,
+                "MERN Stack Developer",
+                2000,
+                "React Developer",
+                2000,
+                "Backend Developer",
+                2000,
+              ]}
+              wrapper="span"
+              speed={50}
+              repeat={Infinity}
+            />
           </h1>
 
           <p className="hero-text">
@@ -117,7 +133,13 @@ function App() {
             <button>GitHub</button>
           </a>
 
-          <button disabled>Live Demo Coming Soon</button>
+          <a
+            href="https://teboho-portfolio-rho.vercel.app"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <button>Live Demo</button>
+          </a>
         </div>
       </div>
     ))}
