@@ -456,3 +456,32 @@ body {
 .project-image:hover {
   transform: scale(1.02);
 }
+.footer {
+  padding: 40px 20px;
+  text-align: center;
+  border-top: 1px solid rgba(148, 163, 184, 0.15);
+  margin-top: 40px;
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 18px;
+}
+
+.footer-icons a {
+  color: #38bdf8;
+  font-size: 28px;
+  transition: 0.3s;
+}
+
+.footer-icons a:hover {
+  transform: translateY(-6px) scale(1.1);
+  color: white;
+}
+
+.footer p {
+  color: #94a3b8;
+  font-size: 15px;
+}

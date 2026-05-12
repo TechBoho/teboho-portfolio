@@ -5,6 +5,7 @@ import { useInView } from "react-intersection-observer";
 import profile from "./assets/profile.jpg";
 import expenseTrackerImg from "./assets/expense-tracker.png";
 import portfolioImg from "./assets/portfolio.png";
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 function App() {
 
@@ -304,6 +305,35 @@ function App() {
           </a>
         </p>
       </RevealSection>
+
+      <footer className="footer">
+  <div className="footer-icons">
+    <a
+      href="https://github.com/TechBoho"
+      target="_blank"
+      rel="noreferrer"
+    >
+      <FaGithub />
+    </a>
+
+    <a
+      href="https://www.linkedin.com/in/teboho-lebia-88a9b6320"
+      target="_blank"
+      rel="noreferrer"
+    >
+      <FaLinkedin />
+    </a>
+
+    <a href="mailto:lebiateboho@gmail.com">
+      <FaEnvelope />
+    </a>
+  </div>
+
+  <p>
+    © 2026 Teboho Lebia — Full-Stack Developer Portfolio
+  </p>
+</footer>
+
     </div>
   );
 }
