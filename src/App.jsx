@@ -11,6 +11,33 @@ function App() {
 
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const [activeSection, setActiveSection] = useState("about");
+
+  useEffect(() => {
+  const sections = document.querySelectorAll("section");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
+      });
+    },
+    {
+      threshold: 0.4,
+    }
+  );
+
+  sections.forEach((section) => {
+    observer.observe(section);
+  });
+
+  return () => {
+    sections.forEach((section) => observer.unobserve(section));
+  };
+}, []);
+
   const AnimatedCounter = ({ end, suffix = "" }) => {
   const [count, setCount] = useState(0);
 
@@ -103,11 +130,34 @@ function App() {
   </div>
 
   <div className={`nav-links ${menuOpen ? "open" : ""}`}>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
+    <a
+  href="#about"
+  className={activeSection === "about" ? "active-nav" : ""}
+>
+  About
+</a>
+
+    <a
+  href="#projects"
+  className={activeSection === "projects" ? "active-nav" : ""}
+>
+  Projects
+</a>
+
+    <a
+  href="#skills"
+  className={activeSection === "skills" ? "active-nav" : ""}
+>
+  Skills
+</a>
     <a href="#resume">Resume</a>
-    <a href="#contact">Contact</a>
+    
+    <a
+  href="#contact"
+  className={activeSection === "contact" ? "active-nav" : ""}
+>
+  Contact
+</a>
   </div>
   </nav>
 
