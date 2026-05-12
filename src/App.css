@@ -595,3 +595,41 @@ body {
   color: #38bdf8;
   margin-bottom: 1rem;
 }
+.tech-marquee-section {
+  overflow: hidden;
+}
+
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin-top: 3rem;
+}
+
+.marquee-content {
+  display: flex;
+  gap: 2rem;
+  width: max-content;
+  animation: scrollTech 20s linear infinite;
+}
+
+.marquee-content span {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  color: #38bdf8;
+  font-weight: 600;
+  white-space: nowrap;
+  backdrop-filter: blur(10px);
+}
+
+@keyframes scrollTech {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}

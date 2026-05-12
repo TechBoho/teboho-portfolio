@@ -395,6 +395,34 @@ function App() {
         </p>
       </RevealSection>
 
+      <section className="section tech-marquee-section">
+  <h2>Technology Stack</h2>
+
+  <div className="marquee">
+    <div className="marquee-content">
+      <span>React</span>
+      <span>JavaScript</span>
+      <span>Node.js</span>
+      <span>Express</span>
+      <span>MongoDB</span>
+      <span>GitHub</span>
+      <span>REST APIs</span>
+      <span>Java</span>
+      <span>C#</span>
+
+      <span>React</span>
+      <span>JavaScript</span>
+      <span>Node.js</span>
+      <span>Express</span>
+      <span>MongoDB</span>
+      <span>GitHub</span>
+      <span>REST APIs</span>
+      <span>Java</span>
+      <span>C#</span>
+    </div>
+  </div>
+</section>
+
       <footer className="footer">
   <div className="footer-icons">
     <a
