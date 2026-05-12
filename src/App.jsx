@@ -1,8 +1,27 @@
 import "./App.css";
 import { TypeAnimation } from "react-type-animation";
+import { useInView } from "react-intersection-observer";
 import profile from "./assets/profile.jpg";
 
 function App() {
+
+  const RevealSection = ({ children, className = "", id = "" }) => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.15,
+  });
+
+  return (
+    <section
+      id={id}
+      ref={ref}
+      className={`${className} reveal ${inView ? "show" : ""}`}
+    >
+      {children}
+    </section>
+  );
+};
+
   const projects = [
     {
       title: "Personal Expense Tracker",
@@ -120,7 +139,7 @@ function App() {
   </div>
       </section>
 
-      <section id="about" className="section">
+      <RevealSection id="about" className="section">
         <h2>About Me</h2>
 
         <p>
@@ -131,9 +150,9 @@ function App() {
           teams, and build professional systems that solve
           real problems.
         </p>
-      </section>
+      </RevealSection>
 
-      <section id="projects" className="section">
+      <RevealSection id="projects" className="section">
         <h2>Featured Projects</h2>
 
         <div className="project-grid">
@@ -173,9 +192,9 @@ function App() {
             </div>
           ))}
         </div>
-      </section>
+      </RevealSection>
 
-      <section id="skills" className="section">
+      <RevealSection id="skills" className="section">
         <h2>Technical Skills</h2>
 
         <div className="skills-grid">
@@ -183,9 +202,9 @@ function App() {
             <span key={index}>{skill}</span>
           ))}
         </div>
-      </section>
+      </RevealSection>
 
-      <section className="section job-ready">
+      <RevealSection className="section job-ready">
         <h2>Why Hire Me?</h2>
 
         <div className="reason-grid">
@@ -216,9 +235,9 @@ function App() {
             </p>
           </div>
         </div>
-      </section>
+      </RevealSection>
 
-      <section id="resume" className="section resume-section">
+      <RevealSection id="resume" className="section resume-section">
         <h2>Resume</h2>
 
         <p>
@@ -235,9 +254,9 @@ function App() {
         >
           Download My CV
         </a>
-      </section>
+      </RevealSection>
 
-      <section id="contact" className="section contact">
+      <RevealSection id="contact" className="section contact">
         <h2>Let’s Work Together</h2>
 
         <p>Email: lebiateboho@gmail.com</p>
@@ -263,7 +282,7 @@ function App() {
             {" "}Visit GitHub
           </a>
         </p>
-      </section>
+      </RevealSection>
     </div>
   );
 }
