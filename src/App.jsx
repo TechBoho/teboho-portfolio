@@ -1,0 +1,260 @@
+import "./App.css";
+import { TypeAnimation } from "react-type-animation";
+
+function App() {
+  const projects = [
+    {
+      title: "Personal Expense Tracker",
+      stack: "MERN Stack",
+      description:
+        "Full-stack app with user authentication, JWT login, MongoDB database, and expense management features.",
+    },
+    {
+      title: "Portfolio Website",
+      stack: "React + Vite",
+      description:
+        "Professional developer portfolio built to showcase projects, skills, GitHub, LinkedIn, and career readiness.",
+    },
+  ];
+
+  const skills = [
+    "React.js",
+    "JavaScript",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "Git & GitHub",
+    "REST APIs",
+    "Full-Stack Development",
+    "C#",
+    "Java",
+  ];
+
+  return (
+    <div className="app">
+      <nav className="navbar">
+        <h2>Teboho Lebia</h2>
+
+        <div className="nav-links">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#resume">Resume</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+
+      <section className="hero">
+        <div className="hero-content">
+          <p className="badge">
+            Available for Junior Full-Stack Developer Roles
+          </p>
+
+          <h1>
+            Hi, I’m <span>Teboho</span>
+            <br />
+
+            <TypeAnimation
+              sequence={[
+                "Full-Stack Developer",
+                2000,
+                "MERN Stack Developer",
+                2000,
+                "React Developer",
+                2000,
+                "Backend Developer",
+                2000,
+              ]}
+              wrapper="span"
+              speed={50}
+              repeat={Infinity}
+            />
+          </h1>
+
+          <p className="hero-text">
+            I build modern web applications using React, Node.js,
+            Express, and MongoDB. I am focused on creating
+            real-world projects, solving business problems,
+            and growing into a professional software engineer.
+          </p>
+
+          <div className="hero-buttons">
+            <a href="#projects" className="primary-btn">
+              View My Work
+            </a>
+
+            <a href="#contact" className="secondary-btn">
+              Contact Me
+            </a>
+
+            <a
+              href="/Teboho-Lebia-CV.pdf"
+              download
+              className="secondary-btn"
+            >
+              Download CV
+            </a>
+          </div>
+        </div>
+
+        <div className="hero-card">
+          <h3>Tech Focus</h3>
+
+          <p>React</p>
+          <p>Node.js</p>
+          <p>MongoDB</p>
+          <p>Express</p>
+          <p>C#</p>
+          <p>Java</p>
+        </div>
+      </section>
+
+      <section id="about" className="section">
+        <h2>About Me</h2>
+
+        <p>
+          I am a passionate Full-Stack Developer with a
+          3-year IT diploma and a strong focus on building
+          practical MERN stack applications. My goal is
+          to become job-ready, contribute to real software
+          teams, and build professional systems that solve
+          real problems.
+        </p>
+      </section>
+
+      <section id="projects" className="section">
+        <h2>Featured Projects</h2>
+
+        <div className="project-grid">
+          {projects.map((project, index) => (
+            <div className="project-card" key={index}>
+              <p className="project-stack">{project.stack}</p>
+
+              <h3>{project.title}</h3>
+
+              <p>{project.description}</p>
+
+              <div className="project-actions">
+                <a
+                  href={
+                    project.title === "Personal Expense Tracker"
+                      ? "https://github.com/TechBoho/personal-expense-tracker"
+                      : "https://github.com/TechBoho/teboho-portfolio"
+                  }
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <button>GitHub</button>
+                </a>
+
+                {project.title === "Portfolio Website" ? (
+                  <a
+                    href="https://teboho-portfolio-rho.vercel.app"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <button>Live Demo</button>
+                  </a>
+                ) : (
+                  <button disabled>Deploying Soon</button>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="skills" className="section">
+        <h2>Technical Skills</h2>
+
+        <div className="skills-grid">
+          {skills.map((skill, index) => (
+            <span key={index}>{skill}</span>
+          ))}
+        </div>
+      </section>
+
+      <section className="section job-ready">
+        <h2>Why Hire Me?</h2>
+
+        <div className="reason-grid">
+          <div>
+            <h3>Project Builder</h3>
+
+            <p>
+              I learn by building real applications,
+              not only tutorials.
+            </p>
+          </div>
+
+          <div>
+            <h3>Full-Stack Mindset</h3>
+
+            <p>
+              I understand both frontend design
+              and backend logic.
+            </p>
+          </div>
+
+          <div>
+            <h3>Career Focused</h3>
+
+            <p>
+              I am disciplined, consistent,
+              and serious about software growth.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="resume" className="section resume-section">
+        <h2>Resume</h2>
+
+        <p>
+          I am currently building my career as a
+          Full-Stack Developer, focusing on MERN stack
+          applications, Java, C#, GitHub, and real-world
+          software projects.
+        </p>
+
+        <a
+          href="/Teboho-Lebia-CV.pdf"
+          download
+          className="primary-btn resume-btn"
+        >
+          Download My CV
+        </a>
+      </section>
+
+      <section id="contact" className="section contact">
+        <h2>Let’s Work Together</h2>
+
+        <p>Email: lebiateboho@gmail.com</p>
+
+        <p>
+          LinkedIn:
+          <a
+            href="https://www.linkedin.com/in/teboho-lebia-88a9b6320"
+            target="_blank"
+            rel="noreferrer"
+          >
+            {" "}View Profile
+          </a>
+        </p>
+
+        <p>
+          GitHub:
+          <a
+            href="https://github.com/TechBoho"
+            target="_blank"
+            rel="noreferrer"
+          >
+            {" "}Visit GitHub
+          </a>
+        </p>
+      </section>
+    </div>
+  );
+}
+
+export default App;
