@@ -18,17 +18,17 @@ function App() {
   ];
 
   const skills = [
-  "React.js",
-  "JavaScript",
-  "Node.js",
-  "Express.js",
-  "MongoDB",
-  "Git & GitHub",
-  "REST APIs",
-  "Full-Stack Development",
-  "C#",
-  "Java",
-];
+    "React.js",
+    "JavaScript",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "Git & GitHub",
+    "REST APIs",
+    "Full-Stack Development",
+    "C#",
+    "Java",
+  ];
 
   return (
     <div className="app">
@@ -39,14 +39,16 @@ function App() {
           <a href="#about">About</a>
           <a href="#projects">Projects</a>
           <a href="#skills">Skills</a>
-          <a href="#contact">Contact</a>
           <a href="#resume">Resume</a>
+          <a href="#contact">Contact</a>
         </div>
       </nav>
 
       <section className="hero">
         <div className="hero-content">
-          <p className="badge">Available for Junior Full-Stack Developer Roles</p>
+          <p className="badge">
+            Available for Junior Full-Stack Developer Roles
+          </p>
 
           <h1>
             Hi, I’m <span>Teboho</span>
@@ -70,19 +72,26 @@ function App() {
           </h1>
 
           <p className="hero-text">
-            I build modern web applications using React, Node.js, Express, and
-            MongoDB. I am focused on creating real-world projects, solving
-            business problems, and growing into a professional software engineer.
+            I build modern web applications using React, Node.js,
+            Express, and MongoDB. I am focused on creating
+            real-world projects, solving business problems,
+            and growing into a professional software engineer.
           </p>
 
           <div className="hero-buttons">
             <a href="#projects" className="primary-btn">
               View My Work
             </a>
+
             <a href="#contact" className="secondary-btn">
               Contact Me
             </a>
-            <a href="/Teboho-Lebia-CV.pdf" download className="secondary-btn">
+
+            <a
+              href="/Teboho-Lebia-CV.pdf"
+              download
+              className="secondary-btn"
+            >
               Download CV
             </a>
           </div>
@@ -90,6 +99,7 @@ function App() {
 
         <div className="hero-card">
           <h3>Tech Focus</h3>
+
           <p>React</p>
           <p>Node.js</p>
           <p>MongoDB</p>
@@ -103,48 +113,66 @@ function App() {
         <h2>About Me</h2>
 
         <p>
-          I am a passionate Full-Stack Developer with a 3-year IT diploma and a
-          strong focus on building practical MERN stack applications. My goal is
-          to become job-ready, contribute to real software teams, and build
-          professional systems that solve real problems.
+          I am a passionate Full-Stack Developer with a
+          3-year IT diploma and a strong focus on building
+          practical MERN stack applications. My goal is
+          to become job-ready, contribute to real software
+          teams, and build professional systems that solve
+          real problems.
         </p>
       </section>
 
       <section id="projects" className="section">
-  <h2>Featured Projects</h2>
+        <h2>Featured Projects</h2>
 
-  <div className="project-grid">
-    {projects.map((project, index) => (
-      <div className="project-card" key={index}>
-        <p className="project-stack">{project.stack}</p>
-        <h3>{project.title}</h3>
-        <p>{project.description}</p>
+        <div className="project-grid">
+          {projects.map((project, index) => (
+            <div className="project-card" key={index}>
+              <p className="project-stack">{project.stack}</p>
 
-        <div className="project-actions">
-          <a
-            href={
-              project.title === "Personal Expense Tracker"
-                ? "https://github.com/TechBoho/personal-expense-tracker"
-                : "#"
-            }
-            target="_blank"
-            rel="noreferrer"
-          >
-            <button>GitHub</button>
-          </a>
+              <h3>{project.title}</h3>
 
-          <a
-            href="https://teboho-portfolio-rho.vercel.app"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <button>Live Demo</button>
-          </a>
+              <p>{project.description}</p>
+
+              <div className="project-actions">
+                <a
+                  href={
+                    project.title === "Personal Expense Tracker"
+                      ? "https://github.com/TechBoho/personal-expense-tracker"
+                      : "https://github.com/TechBoho/teboho-portfolio"
+                  }
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <button>GitHub</button>
+                </a>
+
+                {project.title === "Portfolio Website" ? (
+                  <a
+                    href="https://teboho-portfolio-rho.vercel.app"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <button>Live Demo</button>
+                  </a>
+                ) : (
+                  <button disabled>Deploying Soon</button>
+                )}
+              </div>
+            </div>
+          ))}
         </div>
-      </div>
-    ))}
-  </div>
-</section>
+      </section>
+
+      <section id="skills" className="section">
+        <h2>Technical Skills</h2>
+
+        <div className="skills-grid">
+          {skills.map((skill, index) => (
+            <span key={index}>{skill}</span>
+          ))}
+        </div>
+      </section>
 
       <section className="section job-ready">
         <h2>Why Hire Me?</h2>
@@ -152,60 +180,78 @@ function App() {
         <div className="reason-grid">
           <div>
             <h3>Project Builder</h3>
-            <p>I learn by building real applications, not only tutorials.</p>
+
+            <p>
+              I learn by building real applications,
+              not only tutorials.
+            </p>
           </div>
 
           <div>
             <h3>Full-Stack Mindset</h3>
-            <p>I understand both frontend design and backend logic.</p>
+
+            <p>
+              I understand both frontend design
+              and backend logic.
+            </p>
           </div>
 
           <div>
             <h3>Career Focused</h3>
-            <p>I am disciplined, consistent, and serious about software growth.</p>
+
+            <p>
+              I am disciplined, consistent,
+              and serious about software growth.
+            </p>
           </div>
         </div>
       </section>
 
       <section id="resume" className="section resume-section">
-  <h2>Resume</h2>
+        <h2>Resume</h2>
 
-  <p>
-    I am currently building my career as a Full-Stack Developer, focusing on
-    MERN stack applications, Java, C#, GitHub, and real-world software projects.
-  </p>
+        <p>
+          I am currently building my career as a
+          Full-Stack Developer, focusing on MERN stack
+          applications, Java, C#, GitHub, and real-world
+          software projects.
+        </p>
 
-  <a href="/Teboho-Lebia-CV.pdf" download className="primary-btn resume-btn">
-    Download My CV
-  </a>
-</section>
+        <a
+          href="/Teboho-Lebia-CV.pdf"
+          download
+          className="primary-btn resume-btn"
+        >
+          Download My CV
+        </a>
+      </section>
 
       <section id="contact" className="section contact">
         <h2>Let’s Work Together</h2>
 
         <p>Email: lebiateboho@gmail.com</p>
 
-    <p>
-      LinkedIn:
-      <a
-        href="https://www.linkedin.com/in/teboho-lebia-88a9b6320"
-        target="_blank"
-        rel="noreferrer"
-      >
-        {" "}View Profile
-      </a>
-    </p>
+        <p>
+          LinkedIn:
+          <a
+            href="https://www.linkedin.com/in/teboho-lebia-88a9b6320"
+            target="_blank"
+            rel="noreferrer"
+          >
+            {" "}View Profile
+          </a>
+        </p>
 
-    <p>
-      GitHub:
-      <a
-        href="https://github.com/TechBoho/personal-expense-tracker"
-        target="_blank"
-        rel="noreferrer"
-      >
-        {" "}Expense Tracker Repo
-      </a>
-    </p>
+        <p>
+          GitHub:
+          <a
+            href="https://github.com/TechBoho"
+            target="_blank"
+            rel="noreferrer"
+          >
+            {" "}Visit GitHub
+          </a>
+        </p>
       </section>
     </div>
   );
