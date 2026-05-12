@@ -3,6 +3,8 @@ import { useState } from "react";
 import { TypeAnimation } from "react-type-animation";
 import { useInView } from "react-intersection-observer";
 import profile from "./assets/profile.jpg";
+import expenseTrackerImg from "./assets/expense-tracker.png";
+import portfolioImg from "./assets/portfolio.png";
 
 function App() {
 
@@ -26,19 +28,21 @@ function App() {
 };
 
   const projects = [
-    {
-      title: "Personal Expense Tracker",
-      stack: "MERN Stack",
-      description:
-        "Full-stack app with user authentication, JWT login, MongoDB database, and expense management features.",
-    },
-    {
-      title: "Portfolio Website",
-      stack: "React + Vite",
-      description:
-        "Professional developer portfolio built to showcase projects, skills, GitHub, LinkedIn, and career readiness.",
-    },
-  ];
+  {
+    title: "Personal Expense Tracker",
+    stack: "MERN Stack",
+    image: expenseTrackerImg,
+    description:
+      "Full-stack app with user authentication, JWT login, MongoDB database, and expense management features.",
+  },
+  {
+    title: "Portfolio Website",
+    stack: "React + Vite",
+    image: portfolioImg,
+    description:
+      "Professional developer portfolio built to showcase projects, skills, GitHub, LinkedIn, and career readiness.",
+  },
+];
 
   const skills = [
     "React.js",
@@ -170,6 +174,11 @@ function App() {
         <div className="project-grid">
           {projects.map((project, index) => (
             <div className="project-card" key={index}>
+              <img
+            src={project.image}
+            alt={project.title}
+            className="project-image"
+          />
               <p className="project-stack">{project.stack}</p>
 
               <h3>{project.title}</h3>
