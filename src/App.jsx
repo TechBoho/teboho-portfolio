@@ -1,5 +1,5 @@
 import "./App.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { TypeAnimation } from "react-type-animation";
 import { useInView } from "react-intersection-observer";
 import profile from "./assets/profile.jpg";
@@ -10,6 +10,36 @@ import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 function App() {
 
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const AnimatedCounter = ({ end, suffix = "" }) => {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    let start = 0;
+    const duration = 2000;
+    const increment = end / (duration / 16);
+
+    const timer = setInterval(() => {
+      start += increment;
+
+      if (start >= end) {
+        setCount(end);
+        clearInterval(timer);
+      } else {
+        setCount(Math.floor(start));
+      }
+    }, 16);
+
+    return () => clearInterval(timer);
+  }, [end]);
+
+  return (
+    <>
+      {count.toLocaleString()}
+      {suffix}
+    </>
+  );
+};
 
   const RevealSection = ({ children, className = "", id = "" }) => {
   const { ref, inView } = useInView({
@@ -258,6 +288,38 @@ function App() {
           </div>
         </div>
       </RevealSection>
+
+      <RevealSection className="section stats-section">
+      <div className="stats-grid">
+        <div className="stat-card">
+          <h2>
+            <AnimatedCounter end={5} suffix="+" />
+          </h2>
+          <p>Projects Built</p>
+        </div>
+
+        <div className="stat-card">
+          <h2>
+            <AnimatedCounter end={10} suffix="+" />
+          </h2>
+          <p>Technologies Learned</p>
+        </div>
+
+        <div className="stat-card">
+          <h2>
+            <AnimatedCounter end={100} suffix="%" />
+          </h2>
+          <p>Career Focused</p>
+        </div>
+
+        <div className="stat-card">
+          <h2>
+            <AnimatedCounter end={1000} suffix="+" />
+          </h2>
+          <p>Hours of Learning</p>
+        </div>
+      </div>
+    </RevealSection>
 
       <RevealSection id="resume" className="section resume-section">
         <h2>Resume</h2>
