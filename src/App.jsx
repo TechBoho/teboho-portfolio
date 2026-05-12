@@ -151,7 +151,7 @@ function App() {
   Skills
 </a>
     <a href="#resume">Resume</a>
-    
+
     <a
   href="#contact"
   className={activeSection === "contact" ? "active-nav" : ""}
@@ -370,6 +370,39 @@ function App() {
         </div>
       </div>
     </RevealSection>
+
+    <RevealSection className="section timeline-section">
+  <h2>Education & Experience</h2>
+
+  <div className="timeline">
+    <div className="timeline-item">
+      <h3>IT Diploma</h3>
+      <span>Damelin Graduate</span>
+      <p>
+        Completed a 3-year IT diploma with a strong foundation in software
+        development, databases, networking, and system design.
+      </p>
+    </div>
+
+    <div className="timeline-item">
+      <h3>MERN Stack Developer</h3>
+      <span>Portfolio Project Experience</span>
+      <p>
+        Built full-stack applications using React, Node.js, Express, MongoDB,
+        JWT authentication, GitHub, and Vercel deployment.
+      </p>
+    </div>
+
+    <div className="timeline-item">
+      <h3>Junior Full-Stack Developer Focus</h3>
+      <span>Current Career Direction</span>
+      <p>
+        Actively building real-world projects to become job-ready for junior
+        software developer, frontend developer, and full-stack developer roles.
+      </p>
+    </div>
+  </div>
+</RevealSection>
 
       <RevealSection id="resume" className="section resume-section">
         <h2>Resume</h2>
