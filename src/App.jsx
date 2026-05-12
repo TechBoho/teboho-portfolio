@@ -340,6 +340,33 @@ function App() {
         </a>
       </RevealSection>
 
+          <section className="section services-section">
+  <h2>Services</h2>
+
+  <div className="services-grid">
+    <div className="service-card">
+      <h3>Frontend Development</h3>
+      <p>
+        Responsive React websites with modern UI/UX and mobile-friendly layouts.
+      </p>
+    </div>
+
+    <div className="service-card">
+      <h3>Backend Development</h3>
+      <p>
+        REST APIs, authentication systems, MongoDB integration, and server logic.
+      </p>
+    </div>
+
+    <div className="service-card">
+      <h3>Full-Stack Applications</h3>
+      <p>
+        Complete MERN stack systems with frontend, backend, database, and deployment.
+      </p>
+    </div>
+  </div>
+</section>
+
       <RevealSection id="contact" className="section contact">
         <h2>Let’s Work Together</h2>
 
