@@ -1,5 +1,6 @@
 import "./App.css";
 import { TypeAnimation } from "react-type-animation";
+import profile from "./assets/profile.jpg";
 
 function App() {
   const projects = [
@@ -97,16 +98,26 @@ function App() {
           </div>
         </div>
 
-        <div className="hero-card">
-          <h3>Tech Focus</h3>
+        <div className="hero-image-container">
+  <div className="glow"></div>
 
-          <p>React</p>
-          <p>Node.js</p>
-          <p>MongoDB</p>
-          <p>Express</p>
-          <p>C#</p>
-          <p>Java</p>
-        </div>
+  <img
+    src={profile}
+    alt="Teboho Lebia"
+    className="profile-image"
+  />
+
+  <div className="hero-card">
+    <h3>Tech Focus</h3>
+
+    <p>React</p>
+    <p>Node.js</p>
+    <p>MongoDB</p>
+    <p>Express</p>
+    <p>C#</p>
+    <p>Java</p>
+  </div>
+  </div>
       </section>
 
       <section id="about" className="section">
