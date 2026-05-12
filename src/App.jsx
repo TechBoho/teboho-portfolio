@@ -1,9 +1,12 @@
 import "./App.css";
+import { useState } from "react";
 import { TypeAnimation } from "react-type-animation";
 import { useInView } from "react-intersection-observer";
 import profile from "./assets/profile.jpg";
 
 function App() {
+
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const RevealSection = ({ children, className = "", id = "" }) => {
   const { ref, inView } = useInView({
@@ -53,16 +56,25 @@ function App() {
   return (
     <div className="app">
       <nav className="navbar">
-        <h2>Teboho Lebia</h2>
+  <h2>Teboho Lebia</h2>
 
-        <div className="nav-links">
-          <a href="#about">About</a>
-          <a href="#projects">Projects</a>
-          <a href="#skills">Skills</a>
-          <a href="#resume">Resume</a>
-          <a href="#contact">Contact</a>
-        </div>
-      </nav>
+  <div
+    className={`hamburger ${menuOpen ? "active" : ""}`}
+    onClick={() => setMenuOpen(!menuOpen)}
+  >
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <div className={`nav-links ${menuOpen ? "open" : ""}`}>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#resume">Resume</a>
+    <a href="#contact">Contact</a>
+  </div>
+  </nav>
 
       <section className="hero">
         <div className="hero-content">
