@@ -997,3 +997,35 @@ body {
 
   font-style: italic;
 }
+.section {
+  position: relative;
+}
+
+.section::after {
+  content: "";
+
+  position: absolute;
+
+  bottom: -40px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 120px;
+  height: 2px;
+
+  background:
+    linear-gradient(
+      to right,
+      transparent,
+      rgba(56, 189, 248, 0.7),
+      transparent
+    );
+
+  border-radius: 50px;
+}
+.footer::after,
+.cta-section::after,
+.journey-section::after {
+  display: none;
+}
