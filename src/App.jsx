@@ -619,6 +619,17 @@ function App() {
   </div>
 </section>
 
+          <section className="journey-section">
+  <div className="journey-card">
+    <h2>My Developer Journey</h2>
+
+    <p>
+      “I am focused on becoming a world-class software engineer through
+      discipline, consistency, and real-world project building.”
+    </p>
+  </div>
+</section>
+
       <footer className="footer">
   <div className="footer-icons">
     <a
