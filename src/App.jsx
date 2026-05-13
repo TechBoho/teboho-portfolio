@@ -371,6 +371,43 @@ function App() {
       </div>
     </RevealSection>
 
+    <RevealSection className="section featured-tech-section">
+  <h2>Featured Technologies</h2>
+
+  <div className="featured-tech-grid">
+    <div className="featured-tech-card">
+      <h3>React & Frontend</h3>
+      <p>
+        Building responsive and interactive user interfaces using React,
+        JavaScript, HTML, and CSS.
+      </p>
+    </div>
+
+    <div className="featured-tech-card">
+      <h3>Backend Development</h3>
+      <p>
+        Developing REST APIs, authentication systems, and backend logic using
+        Node.js and Express.
+      </p>
+    </div>
+
+    <div className="featured-tech-card">
+      <h3>Database Management</h3>
+      <p>
+        Working with MongoDB databases, CRUD operations, and full-stack data flow.
+      </p>
+    </div>
+
+    <div className="featured-tech-card">
+      <h3>Java & C#</h3>
+      <p>
+        Expanding software engineering skills through Java and C# application
+        development projects.
+      </p>
+    </div>
+  </div>
+</RevealSection>
+
     <RevealSection className="section timeline-section">
   <h2>Education & Experience</h2>
 
