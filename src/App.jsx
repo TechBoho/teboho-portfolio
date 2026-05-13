@@ -187,9 +187,13 @@ function App() {
 
       <section className="hero">
         <div className="hero-content">
-          <p className="badge">
-            Available for Junior Full-Stack Developer Roles
-          </p>
+          <div className="availability-wrapper">
+  <span className="status-dot"></span>
+
+  <p className="badge">
+    Available for Junior Full-Stack Developer Roles
+  </p>
+</div>
 
           <h1>
             Hi, I’m <span>Teboho</span>
