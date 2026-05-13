@@ -13,6 +13,8 @@ function App() {
 
   const [activeSection, setActiveSection] = useState("about");
 
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
   const sections = document.querySelectorAll("section");
 
@@ -36,6 +38,14 @@ function App() {
   return () => {
     sections.forEach((section) => observer.unobserve(section));
   };
+}, []);
+
+  useEffect(() => {
+  const timer = setTimeout(() => {
+    setLoading(false);
+  }, 1800);
+
+  return () => clearTimeout(timer);
 }, []);
 
   const AnimatedCounter = ({ end, suffix = "" }) => {
@@ -114,6 +124,20 @@ function App() {
     "C#",
     "Java",
   ];
+
+  if (loading) {
+  return (
+    <div className="loader-screen">
+      <div className="loader-content">
+        <div className="loader-circle"></div>
+
+        <h1>Teboho Lebia</h1>
+
+        <p>Loading Portfolio...</p>
+      </div>
+    </div>
+  );
+}
 
   return (
     <div className="app">
