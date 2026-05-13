@@ -1,3 +1,13 @@
+body {
+  background:
+    radial-gradient(circle at top left, rgba(56, 189, 248, 0.12), transparent 30%),
+    radial-gradient(circle at bottom right, rgba(168, 85, 247, 0.12), transparent 30%),
+    #020617;
+
+  background-attachment: fixed;
+
+  overflow-x: hidden;
+}
 * {
   margin: 0;
   padding: 0;
@@ -20,6 +30,10 @@ body {
     radial-gradient(circle at top left, rgba(59, 130, 246, 0.25), transparent 35%),
     radial-gradient(circle at top right, rgba(168, 85, 247, 0.2), transparent 35%),
     #020617;
+}
+.app {
+  position: relative;
+  z-index: 1;
 }
 
 .navbar {
@@ -1028,4 +1042,63 @@ body {
 .cta-section::after,
 .journey-section::after {
   display: none;
+}
+body::before {
+  content: "";
+
+  position: fixed;
+
+  width: 500px;
+  height: 500px;
+
+  top: -100px;
+  left: -100px;
+
+  background: rgba(56, 189, 248, 0.12);
+
+  filter: blur(120px);
+
+  z-index: 0;
+
+  animation: floatingGlow 8s ease-in-out infinite alternate;
+}
+
+body::after {
+  content: "";
+
+  position: fixed;
+
+  width: 450px;
+  height: 450px;
+
+  bottom: -100px;
+  right: -100px;
+
+  background: rgba(168, 85, 247, 0.12);
+
+  filter: blur(120px);
+
+  z-index: 0;
+
+  animation: floatingGlowTwo 10s ease-in-out infinite alternate;
+}
+
+@keyframes floatingGlow {
+  from {
+    transform: translate(0, 0);
+  }
+
+  to {
+    transform: translate(60px, 40px);
+  }
+}
+
+@keyframes floatingGlowTwo {
+  from {
+    transform: translate(0, 0);
+  }
+
+  to {
+    transform: translate(-60px, -40px);
+  }
 }
