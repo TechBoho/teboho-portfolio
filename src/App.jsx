@@ -487,6 +487,36 @@ function App() {
   </div>
 </section>
 
+          <RevealSection className="section currently-building-section">
+  <h2>Currently Building</h2>
+
+  <div className="building-grid">
+    <div className="building-card">
+      <h3>Personal Expense Tracker</h3>
+      <p>
+        Expanding a MERN stack application with authentication,
+        expense management, dashboards, and improved user experience.
+      </p>
+    </div>
+
+    <div className="building-card">
+      <h3>Portfolio Enhancements</h3>
+      <p>
+        Continuously improving UI/UX, animations, responsiveness,
+        and professional developer branding.
+      </p>
+    </div>
+
+    <div className="building-card">
+      <h3>Java & C# Projects</h3>
+      <p>
+        Developing desktop and backend-focused projects to strengthen
+        software engineering fundamentals.
+      </p>
+    </div>
+  </div>
+</RevealSection>
+
       <RevealSection id="contact" className="section contact">
         <h2>Let’s Work Together</h2>
 

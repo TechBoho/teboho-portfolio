@@ -728,3 +728,49 @@ body {
   color: #cbd5e1;
   line-height: 1.7;
 }
+.currently-building-section {
+  position: relative;
+}
+
+.building-grid {
+  margin-top: 3rem;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+
+  gap: 2rem;
+}
+
+.building-card {
+  padding: 2rem;
+
+  border-radius: 22px;
+
+  background: rgba(15, 23, 42, 0.55);
+
+  border: 1px solid rgba(148, 163, 184, 0.15);
+
+  backdrop-filter: blur(12px);
+
+  transition: 0.3s ease;
+}
+
+.building-card:hover {
+  transform: translateY(-10px);
+
+  border-color: #38bdf8;
+
+  box-shadow:
+    0 10px 30px rgba(56, 189, 248, 0.15),
+    0 0 20px rgba(56, 189, 248, 0.08);
+}
+
+.building-card h3 {
+  color: #38bdf8;
+  margin-bottom: 1rem;
+}
+
+.building-card p {
+  color: #cbd5e1;
+  line-height: 1.7;
+}
