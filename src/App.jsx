@@ -643,6 +643,13 @@ function App() {
   </p>
 </footer>
 
+    <button
+  className="scroll-top"
+  onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+  >
+    ↑
+  </button>
+
     </div>
   );
 }
