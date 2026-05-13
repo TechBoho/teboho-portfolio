@@ -573,6 +573,24 @@ function App() {
   </div>
 </section>
 
+          <section className="cta-section">
+  <div className="cta-card">
+    <h2>Let’s Build Something Great Together</h2>
+
+    <p>
+      I am actively looking for opportunities to grow as a Full-Stack Developer,
+      contribute to real-world software projects, and collaborate with innovative teams.
+    </p>
+
+    <a
+      href="mailto:lebiateboho@gmail.com"
+      className="primary-btn"
+    >
+      Contact Me
+    </a>
+  </div>
+</section>
+
       <footer className="footer">
   <div className="footer-icons">
     <a
