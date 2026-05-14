@@ -1133,3 +1133,25 @@ body::after {
 
   background: rgba(56, 189, 248, 0.2);
 }
+.cursor-glow {
+  position: fixed;
+
+  width: 280px;
+  height: 280px;
+
+  border-radius: 50%;
+
+  background: rgba(56, 189, 248, 0.08);
+
+  filter: blur(90px);
+
+  pointer-events: none;
+
+  transform: translate(-50%, -50%);
+
+  z-index: 0;
+
+  transition:
+    left 0.08s linear,
+    top 0.08s linear;
+}
