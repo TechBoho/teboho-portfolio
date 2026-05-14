@@ -97,19 +97,25 @@ function App() {
 
   const projects = [
   {
-    title: "Personal Expense Tracker",
-    stack: "MERN Stack",
-    image: expenseTrackerImg,
-    description:
-      "Full-stack app with user authentication, JWT login, MongoDB database, and expense management features.",
-  },
+  title: "Personal Expense Tracker",
+  stack: "MERN Stack",
+  image: expenseTrackerImg,
+
+  tags: ["React", "Node.js", "MongoDB", "JWT"],
+
+  description:
+    "Full-stack app with user authentication, JWT login, MongoDB database, and expense management features.",
+},
   {
-    title: "Portfolio Website",
-    stack: "React + Vite",
-    image: portfolioImg,
-    description:
-      "Professional developer portfolio built to showcase projects, skills, GitHub, LinkedIn, and career readiness.",
-  },
+  title: "Portfolio Website",
+  stack: "React + Vite",
+  image: portfolioImg,
+
+  tags: ["React", "Vite", "CSS", "Responsive"],
+
+  description:
+    "Professional developer portfolio built to showcase projects, skills, GitHub, LinkedIn, and career readiness.",
+},
 ];
 
   const skills = [
@@ -293,6 +299,12 @@ function App() {
               <h3>{project.title}</h3>
 
               <p>{project.description}</p>
+
+              <div className="project-tags">
+              {project.tags.map((tag, index) => (
+                <span key={index}>{tag}</span>
+              ))}
+            </div>
 
               <div className="project-actions">
                 <a

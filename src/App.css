@@ -1102,3 +1102,34 @@ body::after {
     transform: translate(-60px, -40px);
   }
 }
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 10px;
+
+  margin-top: 1.5rem;
+}
+
+.project-tags span {
+  padding: 8px 14px;
+
+  border-radius: 30px;
+
+  background: rgba(56, 189, 248, 0.12);
+
+  border: 1px solid rgba(56, 189, 248, 0.25);
+
+  color: #38bdf8;
+
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  transition: 0.3s ease;
+}
+
+.project-tags span:hover {
+  transform: translateY(-3px);
+
+  background: rgba(56, 189, 248, 0.2);
+}
