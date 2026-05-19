@@ -335,17 +335,17 @@ function App() {
                   <button>GitHub</button>
                 </a>
 
-                {project.title === "Portfolio Website" ? (
-                  <a
-                    href="https://teboho-portfolio-rho.vercel.app"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <button>Live Demo</button>
-                  </a>
-                ) : (
-                  <button disabled>Deploying Soon</button>
-                )}
+                <a
+                  href={
+                    project.title === "Personal Expense Tracker"
+                      ? "https://personal-expense-tracker-lemon.vercel.app"
+                      : "https://teboho-portfolio-rho.vercel.app"
+                  }
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <button>Live Demo</button>
+                </a>
               </div>
             </div>
           ))}
