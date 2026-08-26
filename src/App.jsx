@@ -256,8 +256,8 @@ function App() {
 
             <a
               href="/Teboho-Lebia-CV.pdf"
-              download
-              className="secondary-btn"
+              download="Teboho-Lebia-CV.pdf"
+              className="primary-btn"
             >
               Download CV
             </a>

@@ -1185,3 +1185,25 @@ body::after {
     left 0.08s linear,
     top 0.08s linear;
 }
+.cv-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  border-radius: 14px;
+  border: 2px solid #2fbaf5;
+  background: transparent;
+  color: #2fbaf5;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.cv-btn:hover {
+  background: #2fbaf5;
+  color: #0f172a;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(47, 186, 245, 0.3);
+}
