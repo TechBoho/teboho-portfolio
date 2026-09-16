@@ -5,6 +5,7 @@ import { useInView } from "react-intersection-observer";
 import profile from "./assets/profile.jpg";
 import expenseTrackerImg from "./assets/expense-tracker.png";
 import portfolioImg from "./assets/portfolio.png";
+import taskflowImg from "./assets/taskflow.png";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 function App() {
@@ -110,27 +111,55 @@ function App() {
   );
 };
 
-  const projects = [
+ const projects = [
   {
-  title: "Personal Expense Tracker",
-  stack: "MERN Stack",
-  image: expenseTrackerImg,
+    title: "TechBoho TaskFlow",
+    stack: "MERN Stack",
+    image: taskflowImg,
 
-  tags: ["React", "Node.js", "MongoDB", "JWT"],
+    tags: [
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "JWT",
+      "Recharts",
+    ],
 
-  description:
-    "Full-stack app with user authentication, JWT login, MongoDB database, and expense management features.",
-},
+    description:
+      "Full-stack task management application with secure JWT authentication, user-specific CRUD operations, task categories, priorities, filtering, progress tracking, and interactive analytics.",
+
+    github: "https://github.com/TechBoho/techboho-taskflow",
+    live: "https://techboho-taskflow.vercel.app",
+  },
+
   {
-  title: "Portfolio Website",
-  stack: "React + Vite",
-  image: portfolioImg,
+    title: "Personal Expense Tracker",
+    stack: "MERN Stack",
+    image: expenseTrackerImg,
 
-  tags: ["React", "Vite", "CSS", "Responsive"],
+    tags: ["React", "Node.js", "MongoDB", "JWT"],
 
-  description:
-    "Professional developer portfolio built to showcase projects, skills, GitHub, LinkedIn, and career readiness.",
-},
+    description:
+      "Full-stack app with user authentication, JWT login, MongoDB database, and expense management features.",
+
+    github: "https://github.com/TechBoho/personal-expense-tracker",
+    live: "https://personal-expense-tracker-lemon.vercel.app",
+  },
+
+  {
+    title: "Portfolio Website",
+    stack: "React + Vite",
+    image: portfolioImg,
+
+    tags: ["React", "Vite", "CSS", "Responsive"],
+
+    description:
+      "Professional developer portfolio built to showcase projects, skills, GitHub, LinkedIn, and career readiness.",
+
+    github: "https://github.com/TechBoho/teboho-portfolio",
+    live: "https://teboho-portfolio-rho.vercel.app",
+  },
 ];
 
   const skills = [

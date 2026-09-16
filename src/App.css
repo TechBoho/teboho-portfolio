@@ -1207,3 +1207,82 @@ body::after {
   transform: translateY(-2px);
   box-shadow: 0 8px 22px rgba(47, 186, 245, 0.3);
 }
+/* =========================
+   PROJECT CARD POLISH
+========================= */
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.project-image {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 18px;
+  margin-bottom: 20px;
+}
+
+.project-card > p {
+  margin-bottom: 0;
+}
+
+.project-tags {
+  margin-top: 18px;
+}
+
+.project-actions {
+  margin-top: auto;
+  padding-top: 25px;
+}
+
+.project-actions a {
+  flex: 1;
+  text-decoration: none;
+}
+
+.project-actions button {
+  width: 100%;
+  min-height: 44px;
+}
+
+/* Give the second action a slightly different appearance */
+.project-actions a:nth-child(2) button {
+  background: transparent;
+  color: #38bdf8;
+  border: 1px solid #38bdf8;
+  box-shadow: none;
+}
+
+.project-actions a:nth-child(2) button:hover {
+  background: rgba(56, 189, 248, 0.1);
+  box-shadow: 0 8px 22px rgba(56, 189, 248, 0.15);
+}
+
+/* Tablet / mobile */
+@media (max-width: 900px) {
+  .project-image {
+    height: 230px;
+  }
+}
+
+@media (max-width: 500px) {
+  .project-card {
+    padding: 20px;
+  }
+
+  .project-image {
+    height: 190px;
+  }
+
+  .project-actions {
+    flex-direction: column;
+  }
+
+  .project-actions a {
+    width: 100%;
+  }
+}
