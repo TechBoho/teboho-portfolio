@@ -350,14 +350,9 @@ function App() {
                 <span key={index}>{tag}</span>
               ))}
             </div>
-
               <div className="project-actions">
                 <a
-                  href={
-                    project.title === "Personal Expense Tracker"
-                      ? "https://github.com/TechBoho/personal-expense-tracker"
-                      : "https://github.com/TechBoho/teboho-portfolio"
-                  }
+                  href={project.github}
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -365,11 +360,7 @@ function App() {
                 </a>
 
                 <a
-                  href={
-                    project.title === "Personal Expense Tracker"
-                      ? "https://personal-expense-tracker-lemon.vercel.app"
-                      : "https://teboho-portfolio-rho.vercel.app"
-                  }
+                  href={project.live}
                   target="_blank"
                   rel="noreferrer"
                 >
